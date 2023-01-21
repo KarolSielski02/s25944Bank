@@ -35,4 +35,15 @@ public class Transaction {
     public double getSaldoAfter() {
         return saldoAfter;
     }
+
+    @Override
+    public String toString() {
+        return "Transaction{" +
+                "transactionID=" + transactionID +
+                ", userID=" + userID +
+                ", transactionStatus=" + transactionStatus +
+                ", amount=" + amount +
+                ", saldoAfter=" + saldoAfter +
+                '}';
+    }
 }

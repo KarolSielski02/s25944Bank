@@ -14,15 +14,17 @@ public class BankService {
     }
 
     public User createNewUser(int id, double saldo) {
+        User flagUser = findUserById(id);
+
         if (id <= 0 || saldo < 0) {
             return null;
         }
-        if (findUserById(id) != null) {
-            return null;
+        if (flagUser == null) {
+            User user = new User(id, saldo);
+            userStorage.getUserList().add(user);
+            return user;
         }
-        User user = new User(id, saldo);
-        userStorage.getUserList().add(user);
-        return user;
+        return null;
     }
 
     public User findUserById(int id) {
