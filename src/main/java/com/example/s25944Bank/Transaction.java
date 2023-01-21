@@ -6,12 +6,14 @@ public class Transaction {
     private int userID;
     private TransactionStatus transactionStatus;
     private double amount;
+    private double saldoAfter;
 
-    public Transaction(int transactionID, int userID, TransactionStatus transactionStatus, double amount) {
+    public Transaction(int transactionID, int userID, TransactionStatus transactionStatus, double amount, double saldoAfter) {
         this.transactionID = transactionID;
         this.userID = userID;
         this.transactionStatus = transactionStatus;
         this.amount = amount;
+        this.saldoAfter = saldoAfter;
     }
 
     public int getUserID() {
@@ -28,5 +30,9 @@ public class Transaction {
 
     public int getTransactionID() {
         return transactionID;
+    }
+
+    public double getSaldoAfter() {
+        return saldoAfter;
     }
 }

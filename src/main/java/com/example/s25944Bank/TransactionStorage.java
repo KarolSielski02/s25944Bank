@@ -11,7 +11,7 @@ public class TransactionStorage {
     List<Transaction> transactionList = new ArrayList<>();
 
     public TransactionStorage() {
-        transactionList.add(new Transaction(0,0, TransactionStatus.ACCEPTED, 10));
+        transactionList.add(new Transaction(0,0, TransactionStatus.ACCEPTED, 10, 110));
     }
 
     public List<Transaction> getTransactionList() {
